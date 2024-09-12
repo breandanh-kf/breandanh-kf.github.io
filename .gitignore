@@ -1,0 +1,6 @@
+node_modules
+# Have to ignore the package-lock
+# because npm prefers the users's registry
+# over one set in the project... so
+# the CI  can't get hold of any dependencies otherwise
+package-lock.json

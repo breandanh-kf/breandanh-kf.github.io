@@ -1,0 +1,22 @@
+{
+  "name": "breandanh-kf.github.io",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "build": "echo 'BUILDING.... BUILDING... DONE!'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/breandanh-kf/breandanh-kf.github.io.git"
+  },
+  "author": "breandanh-kf",
+  "license": "",
+  "bugs": {
+    "url": "https://github.com/breandanh-kf/breandanh-kf.github.io/issues"
+  },
+  "homepage": "https://breandanh-kf.github.io",
+  "description": "",
+  "devDependencies": {
+    "typescript": "^5.6.2"
+  }
+}
