@@ -48,6 +48,8 @@ jobs:
         run: ls -al ${{ github.workspace }}
       - run: echo "🍏 This job's status is ${{ job.status }}."
   report-build-status:
+    environment:
+      GH_TOKEN: ${{ github.token }}
     needs: build
     permissions:
       id-token: write
