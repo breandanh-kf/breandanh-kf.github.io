@@ -47,17 +47,18 @@ jobs:
       - name: List files in the repository
         run: ls -al ${{ github.workspace }}
       - run: echo "🍏 This job's status is ${{ job.status }}."
-  report-build-status:
-    env:
-      GH_TOKEN: ${{ github.token }}
-    needs: build
-    permissions:
-      id-token: write
-      pages: write
-    runs-on: ubuntu-latest
-    steps:
-      - name: Report Build Status
-        run: gh api -X POST "repos/$GITHUB_REPOSITORY/pages/telemetry" -F github_run_id="$GITHUB_RUN_ID" -F conclusion="$CONCLUSION"
+  # # I don't think this is needed
+  # report-build-status:
+  #   env:
+  #     GH_TOKEN: ${{ github.token }}
+  #   needs: build
+  #   permissions:
+  #     id-token: write
+  #     pages: write
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - name: Report Build Status
+  #       run: gh api -X POST "repos/$GITHUB_REPOSITORY/pages/telemetry" -F github_run_id="$GITHUB_RUN_ID" -F conclusion="$CONCLUSION"
   test:
     environment:
       name: upside-node-registry
@@ -71,4 +72,4 @@ jobs:
       - run: npm i
 name: breandanh-kf Pages Deploy
 'on': [push]
-run-name: breandanh-kf Pages Deploy
+run-name: ${{ github.event_name }} ${{ github.ref }}
