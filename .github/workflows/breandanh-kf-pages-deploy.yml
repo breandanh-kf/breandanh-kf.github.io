@@ -1,6 +1,4 @@
 jobs:
-      # - run: npm run lint-ci
-      # - run: npm test
   build:
     environment:
       name: upside-node-registry

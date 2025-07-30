@@ -16,7 +16,7 @@
     "url": "git+ssh://git@github.com/breandanh-kf/breandanh-kf.github.io.git"
   },
   "scripts": {
-    "build": "mkdir -p ./_site && cp index.html ./_site/."
+    "build": "mkdir -p ./_site && cp index.php ./_site/."
   },
   "version": "1.0.0"
 }
